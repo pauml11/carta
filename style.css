@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #5ac8ed4f, #455b6d85);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  perspective: 1000px;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background: #34b9d493;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  animation: openEnvelope 2s ease forwards;
+  transform-style: preserve-3d;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #5391fb7a;
+  transform-origin: top;
+  border-radius: 0 0 150px 150px;
+  animation: openFlap 2s ease forwards;
+  z-index: 2;
+  backface-visibility: visible;
+  transform-style: preserve-3d;
+  /* Queda en su posición final */
+  animation-fill-mode: forwards;
+}
+
+.letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  text-align: center;
+  transform: translateY(150%);
+  animation: slideLetter 2s 1s ease-out forwards;
+  border-radius: 10px;
+  z-index: 1;
+  animation-fill-mode: forwards;
+}
+
+.letter h1 {
+  color: #ff69b4;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.letter p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.firma {
+  margin-top: 15px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Animaciones */
+@keyframes openFlap {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(-140deg); }
+}
+
+@keyframes slideLetter {
+  0% { transform: translateY(130%); }
+  100% { transform: translateY(0%); }
+}
+
+@keyframes openEnvelope {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Responsive para celulares */
+@media (max-width: 480px) {
+  .letter {
+    padding: 20px;
+  }
+
+  .letter h1 {
+    font-size: 18px;
+  }
+
+  .letter p {
+    font-size: 14px;
+  }
+
+  .firma {
+    font-size: 14px;
+  }
+}
