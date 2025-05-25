@@ -17,7 +17,7 @@ body {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: 950px;
   height: auto;
   perspective: 1000px;
 }
@@ -73,7 +73,7 @@ body {
 }
 
 .letter p {
-  font-size: 18px;
+  font-size: 16px;
   color: #444;
   margin-bottom: 10px;
 }
