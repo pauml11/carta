@@ -17,7 +17,7 @@ body {
 .container {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   height: auto;
   perspective: 1000px;
 }
@@ -57,7 +57,7 @@ body {
   left: 0;
   width: 100%;
   background: white;
-  padding: 40px;
+  padding: 60px;
   text-align: center;
   transform: translateY(150%);
   animation: slideLetter 2s 1s ease-out forwards;
@@ -69,17 +69,17 @@ body {
 .letter h1 {
   color: #ff69b4;
   margin-bottom: 10px;
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .letter p {
-  font-size: 16px;
+  font-size: 18px;
   color: #444;
   margin-bottom: 10px;
 }
 
 .firma {
-  margin-top: 15px;
+  margin-top: 16px;
   font-style: italic;
   color: #666;
 }
